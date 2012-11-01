@@ -1,0 +1,67 @@
+﻿<%@ Master Language="VB" AutoEventWireup="false" CodeFile="Site.Master.vb" Inherits="Site" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head id="Head1" runat="server">
+    <title>.: BurlyCRM :.</title>
+    <link href="~/Styles/StyleSheet.css" rel="stylesheet" type="text/css" />
+    <asp:ContentPlaceHolder ID="HeadContent" runat="server">
+    </asp:ContentPlaceHolder>
+    <style type="text/css">
+        .style1
+        {
+            font-size: xx-small;
+            font-style: italic;
+        }
+        .style2
+        {
+            color: #FFFFFF;
+        }
+    </style>
+    </head>
+<body>
+    <form id="Form1" runat="server">
+    <div class="page">
+        <div class="header">            
+        <div class="loginDisplay">
+            </div>
+            <div class="title">
+                <h1 style="background-position: left top; background-image: url('images/header.jpg'); background-repeat: no-repeat; line-height: 20px; width: 960px; height: 245px; position: left; top: 0px; left: 0px; text-align: center;">                
+                </h1>
+                </div>
+            <div class="title">
+            </div>
+
+            <div class="clear hideSkiplink">
+                <asp:Menu ID="NavigationMenu" runat="server" CssClass="menu" EnableViewState="false" IncludeStyleBlock="false" Orientation="Horizontal">
+                    <Items>
+                        <asp:MenuItem NavigateUrl="~/Index.aspx" Text="Home"/>
+                        <asp:MenuItem NavigateUrl="~/Leads.aspx" Text="Leads"/>
+                        <asp:MenuItem NavigateUrl="~/Contacts.aspx" Text="Contacts"/>
+                        <asp:MenuItem NavigateUrl="~/Accounts.aspx" Text="Accounts"/>
+                        <asp:MenuItem NavigateUrl="~/Opportunites.aspx" Text="Opportunites"/>
+                        <asp:MenuItem NavigateUrl="~/Reports.aspx" Text="Reports"/>
+
+                       
+                                
+                    </Items>
+                </asp:Menu>
+               
+            </div>
+        </div>
+        <div class="main">
+            <asp:ContentPlaceHolder ID="MainContent" runat="server"/>
+        </div>
+        <div class="clear">
+        </div>
+    </div>
+    <div class="footer">
+        
+        <br />
+        <span class="style1">Copyright 2012 - Hyde Tech Solutions<br />
+        Website Designed and Maintained by: <a class="style2" href="http://www.hydetechsolutions.com">Hyde Tech Solutions</a><br />
+               
+        <br />
+         </span></div></form>
+ </body>
+</html>
